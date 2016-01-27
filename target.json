@@ -1,6 +1,6 @@
 {
   "name": "watch-frdm-k64f-gcc",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Freescale FRDM-K64F target with Watch Reference Design configurations.",
   "licenses": [
     {

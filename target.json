@@ -1,0 +1,119 @@
+{
+  "name": "watch-frdm-k64f-gcc",
+  "version": "0.0.0",
+  "description": "Freescale FRDM-K64F target with Watch Reference Design configurations.",
+  "licenses": [
+    {
+      "url": "https://spdx.org/licenses/Apache-2.0",
+      "type": "Apache-2.0"
+    }
+  ],
+  "inherits": {
+    "frdm-k64f-gcc": "*"
+  },
+  "keywords": [
+    "mbed-target:watch-frdm-k64f",
+    "k64f",
+    "watch",
+    "gcc"
+  ],
+  "similarTo": [
+    "framebuffer-1bit",
+    "matrixlcd-sharp"
+  ],
+  "config": {
+    "minar": {
+      "stats": true
+    },
+    "hardware": {
+      "wearable-reference-design": {
+        "battery": {
+          "present": false
+        },
+        "battery-backup": {
+          "present": false
+        },
+        "battery-gauge": {
+          "present": false
+        },
+        "bit-band": {
+          "present": false
+        },
+        "bluetooth-le": {
+          "present": false
+        },
+        "button": {
+          "present": true,
+          "pin": {
+            "forward": "PTA4",
+            "backward": "PTC6"
+          }
+        },
+        "buzzer": {
+          "present": false
+        },
+        "external-gpio": {
+          "present": false
+        },
+        "external-sram": {
+          "present": false
+        },
+        "gps": {
+          "present": false
+        },
+        "micro-sd": {
+          "present": false
+        },
+        "nfc": {
+          "present": false
+        },
+        "output-compare": {
+          "present": false
+        },
+        "rfid": {
+          "present": false
+        },
+        "screen": {
+          "present": true,
+          "spi": {
+            "mosi": "PTD2",
+            "miso": "NC",
+            "clk": "PTD1",
+            "cs": "PTD0"
+          },
+          "pin": {
+            "enable": "PTE25",
+            "refresh": "PTC4"
+          }
+        },
+        "sensor-battery-current": {
+          "present": false
+        },
+        "sensor-battery-charging-current": {
+          "present": false
+        },
+        "sensor-battery-voltage": {
+          "present": false
+        },
+        "sensor-fingerprint": {
+          "present": false
+        },
+        "sensor-temperature": {
+          "present": false
+        },
+        "swo": {
+          "present": false
+        },
+        "touch": {
+          "present": false
+        },
+        "vibration-motor": {
+          "present": false
+        },
+        "watchdog": {
+          "present": false
+        }
+      }
+    }
+  }
+}

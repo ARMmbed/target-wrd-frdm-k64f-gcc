@@ -1,7 +1,7 @@
 {
-  "name": "watch-frdm-k64f-gcc",
+  "name": "wrd-frdm-k64f-gcc",
   "version": "1.0.0",
-  "description": "Freescale FRDM-K64F target with Watch Reference Design configurations.",
+  "description": "Freescale FRDM-K64F target with Wearable Reference Design configurations.",
   "licenses": [
     {
       "url": "https://spdx.org/licenses/Apache-2.0",
@@ -12,18 +12,25 @@
     "frdm-k64f-gcc": "*"
   },
   "keywords": [
-    "mbed-target:watch-frdm-k64f",
+    "mbed-target:wrd-frdm-k64f",
     "k64f",
     "watch",
     "gcc"
   ],
   "similarTo": [
+    "wrd-ui",
     "framebuffer-1bit",
-    "matrixlcd-sharp"
+    "matrixlcd-printf-1bit",
+    "wrd-rgb-led",
+    "rgb-led-pwm",
+    "wrd-message-center",
+    "message-center-spi-master"
   ],
   "config": {
-    "minar": {
-      "stats": true
+    "mbed-os": {
+      "stdio": {
+        "default-baud": 115200
+      }
     },
     "hardware": {
       "wearable-reference-design": {
@@ -44,9 +51,15 @@
         },
         "button": {
           "present": true,
-          "pin": {
-            "forward": "PTA4",
-            "backward": "PTC6"
+          "forward": {
+            "gpio": {
+              "pin": "PTA4"
+            }
+          },
+          "backward": {
+            "gpio": {
+              "pin": "PTC6"
+            }
           }
         },
         "buzzer": {
@@ -61,6 +74,25 @@
         "gps": {
           "present": false
         },
+        "interface": {
+          "i2c": {
+            "size": 1,
+            "i2c0": {
+              "name": "i2c0",
+              "sda": "PTE25",
+              "scl": "PTE24"
+            }
+          },
+          "spi": {
+            "size": 0
+          }
+        },
+        "message-center": {
+          "present": true,
+          "transport": {
+            "size": 0
+          }
+        },
         "micro-sd": {
           "present": false
         },
@@ -73,18 +105,35 @@
         "rfid": {
           "present": false
         },
-        "screen": {
+        "rgb-led": {
           "present": true,
-          "spi": {
-            "mosi": "PTD2",
-            "miso": "NC",
-            "clk": "PTD1",
-            "cs": "PTD0"
+          "red": {
+            "pwm": {
+              "pin": "PTB22"
+            }
           },
-          "pin": {
-            "enable": "PTE25",
-            "refresh": "PTC4"
+          "green": {
+            "pwm": {
+              "pin": "PTE26"
+            }
+          },
+          "blue": {
+            "pwm": {
+              "pin": "PTB21"
+            }
           }
+        },
+        "screen": {
+          "present": false
+        },
+        "sensor-accelerometer": {
+          "present": false
+        },
+        "sensor-gyroscope": {
+          "present": false
+        },
+        "sensor-magnetometer": {
+          "present": false
         },
         "sensor-battery-current": {
           "present": false

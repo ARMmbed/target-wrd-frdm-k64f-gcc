@@ -1,6 +1,6 @@
 {
   "name": "wrd-frdm-k64f-gcc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Freescale FRDM-K64F target with Wearable Reference Design configurations.",
   "licenses": [
     {

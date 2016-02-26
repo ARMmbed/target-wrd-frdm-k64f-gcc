@@ -22,7 +22,7 @@
     "framebuffer-1bit",
     "matrixlcd-printf-1bit",
     "wrd-rgb-led",
-    "rgb-led-pwm",
+    "rgb-led-gpio",
     "wrd-message-center",
     "message-center-spi-master"
   ],
@@ -108,18 +108,21 @@
         "rgb-led": {
           "present": true,
           "red": {
-            "pwm": {
-              "pin": "PTB22"
+            "gpio": {
+              "pin": "PTB22",
+              "inverse": true
             }
           },
           "green": {
-            "pwm": {
-              "pin": "PTE26"
+            "gpio": {
+              "pin": "PTE26",
+              "inverse": true
             }
           },
           "blue": {
-            "pwm": {
-              "pin": "PTB21"
+            "gpio": {
+              "pin": "PTB21",
+              "inverse": true
             }
           }
         },

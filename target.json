@@ -33,7 +33,7 @@
       }
     },
     "hardware": {
-      "wearable-reference-design": {
+      "wrd": {
         "battery": {
           "present": false
         },
@@ -51,24 +51,23 @@
         },
         "button": {
           "present": true,
-          "forward": {
-            "gpio": {
-              "pin": "PTA4"
-            }
+          "size": 2,
+          "button0": {
+            "pin": "PTA4",
+            "location": 0
           },
-          "backward": {
-            "gpio": {
-              "pin": "PTC6"
-            }
+          "button1": {
+            "pin": "PTC6",
+            "location": 0
           }
         },
         "buzzer": {
           "present": false
         },
-        "external-gpio": {
+        "external-sram": {
           "present": false
         },
-        "external-sram": {
+        "gpio-expander": {
           "present": false
         },
         "gps": {
@@ -76,22 +75,14 @@
         },
         "interface": {
           "i2c": {
-            "size": 1,
-            "i2c0": {
-              "name": "i2c0",
-              "sda": "PTE25",
-              "scl": "PTE24"
-            }
+            "size": 0
           },
           "spi": {
             "size": 0
           }
         },
-        "message-center": {
-          "present": true,
-          "transport": {
-            "size": 0
-          }
+        "led": {
+          "present": false
         },
         "micro-sd": {
           "present": false
@@ -133,9 +124,6 @@
           "present": false
         },
         "sensor-gyroscope": {
-          "present": false
-        },
-        "sensor-magnetometer": {
           "present": false
         },
         "sensor-battery-current": {

@@ -9,7 +9,7 @@
     }
   ],
   "inherits": {
-    "frdm-k64f-gcc": "*"
+    "frdm-k64f-gcc": "2.0.0"
   },
   "keywords": [
     "mbed-target:wrd-frdm-k64f",

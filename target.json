@@ -9,10 +9,10 @@
     }
   ],
   "inherits": {
-    "frdm-k64f-gcc": "2.0.0"
+    "frdm-k64f-gcc": "^2.0.0"
   },
   "keywords": [
-    "mbed-target:wrd-frdm-k64f",
+    "mbed-target:wrd-frdm-k64f-gcc",
     "k64f",
     "watch",
     "gcc"
